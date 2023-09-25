@@ -1,0 +1,15 @@
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+gerencianet:
+  clientId: "Client_Id_b3450f37452768ba13980390a3fd4cc6037b1408"
+  clientSecret: "Client_Secret_661252943233154dd71e23de8a0ab764e426fc57"
+  authorization:
+    url: "https://cobrancas-h.api.efipay.com.br/v1/authorize"
+  payment:
+    url: "https://cobrancas-h.api.efipay.com.br/v1/charge/one-step/link"

@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "28f7f425-2bd3-4a33-9c81-1d751a4ab96a",
+		"name": "Order API",
+		"description": "Order Swagger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28626494"
+	},
+	"item": [
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "calculate",
+					"item": [
+						{
+							"name": "calculate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"persons\": [\n    {\n      \"name\": \"<string>\",\n      \"orderItems\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<double>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<double>\"\n        }\n      ]\n    },\n    {\n      \"name\": \"<string>\",\n      \"orderItems\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<double>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<double>\"\n        }\n      ]\n    }\n  ],\n  \"deliveryTax\": \"<double>\",\n  \"waiterTax\": \"<integer>\",\n  \"discount\": \"<double>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/order/calculate",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order",
+										"calculate"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"persons\": [\n    {\n      \"name\": \"<string>\",\n      \"orderItems\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<double>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<double>\"\n        }\n      ]\n    },\n    {\n      \"name\": \"<string>\",\n      \"orderItems\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<double>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<double>\"\n        }\n      ]\n    }\n  ],\n  \"deliveryTax\": \"<double>\",\n  \"waiterTax\": \"<integer>\",\n  \"discount\": \"<double>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/order/calculate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"order",
+												"calculate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"namePerson\": \"<string>\",\n    \"totalPayable\": \"<string>\",\n    \"paymentLink\": \"<string>\"\n  },\n  {\n    \"namePerson\": \"<string>\",\n    \"totalPayable\": \"<string>\",\n    \"paymentLink\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
